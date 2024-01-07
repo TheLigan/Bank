@@ -1,4 +1,4 @@
-
+import "./Profil.css";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getLoginFetch, saveUserProfil } from "../../services/API";
@@ -9,12 +9,12 @@ import Account from "../../components/Account/Account";
 
 
 function Profil() {
-    
+    // Use State
     let [newFirstName, setNewFirstName] = useState("");
     let [newLastName, setNewLastName] = useState("");
 
 
-    
+    // Use Selector / Use Effect
     const dispatch = useDispatch();
 
     const firstName = useSelector((state) => state.firstName.value);
@@ -31,7 +31,7 @@ function Profil() {
     }, []);
 
 
-    
+    // Edit name
     const handleEdit = () => {
         document.getElementById("fullName").style.display = "none";
         document.getElementById("edit-button").style.display = "none";
@@ -39,7 +39,7 @@ function Profil() {
     }
 
     
-    
+    // Save Edit
     const handleEditSave = () => {
         document.getElementById("fullName").style.display = "block";
         document.getElementById("edit-button").style.display = "initial";
@@ -51,7 +51,7 @@ function Profil() {
     }
 
 
-    
+    // Cancel Edit
     const handleEditCancel = () => {
         document.getElementById("fullName").style.display = "block";
         document.getElementById("edit-button").style.display = "initial";
@@ -59,7 +59,7 @@ function Profil() {
     }
 
 
-    
+    // Redirection
     if(token === 0) return <Navigate to="/login" />
 
     return (

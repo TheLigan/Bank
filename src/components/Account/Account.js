@@ -1,4 +1,4 @@
-
+import "./Account.css";
 
 
 function Account({titre, montant, description}) {

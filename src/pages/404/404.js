@@ -1,4 +1,4 @@
-
+import "./404.css";
 import { NavLink } from "react-router-dom";
 
 

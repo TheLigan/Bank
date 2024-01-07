@@ -1,4 +1,4 @@
-
+import "./Feature.css";
 
 
 function Feature({imgSrc, imgAlt, titre, description}) {

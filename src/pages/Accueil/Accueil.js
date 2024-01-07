@@ -1,4 +1,4 @@
-
+import "./Accueil.css";
 import Feature from "../../components/Feature/Feature";
 import iconChat from "../../assets/img/icon-chat.png";
 import iconMoney from "../../assets/img/icon-money.png";
